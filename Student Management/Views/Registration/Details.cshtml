@@ -1,0 +1,63 @@
+﻿@model Student_Management.Models.registration
+
+@{
+    ViewBag.Title = "Details";
+}
+
+
+
+<div class="details-container">
+    <h2 class="details-title">Details</h2>
+
+    <div>
+        <h4>Registration</h4>
+        <hr />
+        <dl class="details-list">
+            <dt>
+                @Html.DisplayNameFor(model => model.firstname)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.firstname)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.lastname)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.lastname)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.nic)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.nic)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.telno)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.telno)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.batch.batch1)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.batch.batch1)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.course.course1)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.course.course1)
+            </dd>
+        </dl>
+    </div>
+    <div class="details-actions">
+        @Html.ActionLink("Edit", "Edit", new { id = Model.id }, new { @class = "btn btn-primary" })
+        @Html.ActionLink("Back to List", "Index", new { @class = "btn btn-secondary" })
+    </div>
+</div>
